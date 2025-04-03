@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Bridge</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <div class="dropdown">
+                <a href="#">Collaborate</a>
+                <div class="dropdown-content">
+                    <a href="html/ngo.html">For NGO</a>
+                    <a href="html/corporation.html">For Corporations</a>
+                    <a href="html/student.html">For Students</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#" >Join Us</a>
+                <div class="dropdown-content">
+                    <a href="html/share.html">Share Food</a>
+                    <a href="html/distributor.html">Be a Distributor</a>
+                </div>
+            </div>
+        </div>
+        <a href="html/donate.html" class="donate-btn">Donate</a>
+    </nav>
+
+    <!-- Image Slider -->
+    <div class="slider-container">
+        <div class="slides">
+            <img src="images/front banner 2.jpg" class="slide" alt="Slide 1">
+            <img src="images/front banner.jpeg" class="slide" alt="Slide 2">
+            <img src="images/Hunger.jpeg" class="slide" alt="Slide 3">
+            <img src="images/poverty-l.jpg" class="slide" alt="Slide 4">
+        </div>
+
+        <!-- Slider Navigation Buttons -->
+        <button class="prev" onclick="prevSlide()">❮</button>
+        <button class="next" onclick="nextSlide()">❯</button>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>Food Bridge</h1>
+            <p>Connecting surplus to smiles</p>
+        </section>
+    </div>
+
+    <!-- Problem Section -->
+    <section class="problem-section">
+        <h2 class="problem-heading">The Problem</h2>
+        <div class="problem-container">
+            <div class="problem-item">
+                <div class="bar"></div>
+                <p>Hunger kills more people each year than AIDS, malaria and terrorism combined</p>
+            </div>
+            <div class="problem-item">
+                <div class="bar"></div>
+                <p>One-third of the food produced around the world is never consumed</p>
+            </div>
+            <div class="problem-item">
+                <div class="bar"></div>
+                <p>850 million hungry people in the world</p>
+            </div>
+            <div class="problem-item">
+                <div class="bar"></div>
+                <p>Every 10 seconds, a child dies from hunger</p>
+            </div>
+            <div class="problem-item">
+                <div class="bar"></div>
+                <p>82% of hungry people live in countries with food surpluses, not food shortages</p>
+            </div>
+            <div class="problem-item">
+                <div class="bar"></div>
+                <p>One in every eight people sleeps hungry each night</p>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <section class="approach-section">
+        <h2>Our Approach</h2>
+        <p>
+            Our initiative is dedicated to bridging the gap between surplus food and underprivileged communities in need. Every day, hotels, large events, and restaurants generate significant amounts of excess food—food that is perfectly edible but often goes to waste. At the same time, countless individuals struggle with food insecurity, lacking access to nutritious meals.
+        </p>
+        <p>
+            This initiative not only reduces food waste but also fosters a culture of social responsibility, ensuring that no good food goes unused while addressing the urgent issue of hunger. By leveraging technology, logistics, and community partnerships, we aim to make a tangible impact—one meal at a time.
+        </p>
+        <p>
+            Together, we can create a world where surplus food serves a greater purpose, ensuring that abundance is shared, and no one goes hungry.
+        </p>
+    </section>
+
+
+
+
+    
+    <!-- Donation Section -->
+<section class="donation-section">
+    <h2>No surplus? No problem!</h2>
+    <p>Support our mission through donations and help feed those in need.</p>
+    <a href="#" class="donate-link">DONATE NOW!</a>
+</section>
+
+
+
+
+<!-- Impact Section -->
+<section class="impact-section">
+    <h2>Ways to Make an Impact</h2>
+    <div class="impact-container">
+        <div class="impact-card">
+            <h3>As a food contributer</h3>
+            <h4>Dont waste your leftovers</h4>
+            <p>If you manage a restaurant or generally have a large amount of leftover food. Let’s connect and save food together!</p>
+            <h4>Connect with us!</h4>
+            <p>Connect with us so we can make sure your leftovers reach the right place, to the people in need.</p>
+            <h4>Contribute Consistently</h4>
+            <p>All we need is a regular contribution from your firm to make a real impact.</p>
+            <a href="html/share.html" class="join-btn">Join Us</a>
+        </div>
+
+        <div class="impact-card">
+            <h3>As a food distributer</h3>
+            <h4>Collect & Share</h4>
+            <p>Identify surplus food from events, hotels, or restaurants and set it aside for donation.</p>
+            <h4>Connect with us!</h4>
+            <p>Connect with our team to schedule safe pickup and redistribution to those in need.</p>
+            <h4>Make an Impact</h4>
+            <p>Help reduce food waste while providing meals to underserved communities. Join us in turning surplus into sustenance!</p>
+            <a href="html/distributor.html" class="join-btn">Join Us</a>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+    <!-- JavaScript for Slider -->
+    <script>
+        let currentSlide = 0;
+const slides = document.querySelectorAll(".slide");
+const totalSlides = slides.length;
+
+function updateSlide() {
+    const slideWidth = slides[0].clientWidth;
+    const offset = -currentSlide * slideWidth;
+    document.querySelector(".slides").style.transform = `translateX(${offset}px)`;
+}
+
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    updateSlide();
+}
+
+function prevSlide() {
+    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+    updateSlide();
+}
+
+// Auto-slide every 4 seconds
+setInterval(nextSlide, 4000);
+
+// Initialize slide positions
+updateSlide();
+
+        updateSlide();
+    </script>
+</body>
+</html>

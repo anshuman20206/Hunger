@@ -1,0 +1,326 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 15px 40px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ff6b6b;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.7);
+    min-width: 150px;
+    top: 100%;
+    left: 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 8px;
+    color: white;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.donate-btn {
+    background: #d9534f;
+    padding: 8px 15px;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.donate-btn:hover {
+    background: #c9302c;
+}
+
+/* Image Slider */
+.slider-container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 1s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 24px;
+    transition: 0.3s;
+}
+
+.prev { left: 20px; }
+.next { right: 20px; }
+
+.prev:hover, .next:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* Smooth Loop Transition */
+.slides.no-transition {
+    transition: none !important;
+}
+
+/* Hero Section */
+.hero {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    z-index: 10;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 22px;
+    font-style: italic;
+    color: #ffaaaa;
+}
+
+/* Problem Section */
+.problem-section {
+    padding: 60px 10%;
+    text-align: center;
+    background: #f9f9f9;
+}
+
+.problem-heading {
+    font-size: 36px;
+    font-weight: bold;
+    color: #ff6b6b;
+    margin-bottom: 30px;
+}
+
+.problem-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.problem-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 300px;
+    min-height: 150px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.problem-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.bar {
+    width: 50px;
+    height: 5px;
+    background: #ff6b6b;
+    margin-bottom: 10px;
+}
+
+/* Approach Section */
+.approach-section {
+    padding: 70px 10%;
+    background: #ffe6e6;
+    text-align: left;
+    line-height: 1.6;
+}
+
+.approach-section h2 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #ff6b6b;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.approach-section p {
+    font-size: 18px;
+    color: #444;
+    margin-bottom: 15px;
+}
+/* Donation Section Styles */
+.donation-section {
+    padding: 40px 10%;
+    background: #85bb65;
+    text-align: center;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    border-top: 8px solid #ffe6e6;
+}
+
+.donation-section h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.donation-section p {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.donate-link {
+    font-size: 22px;
+    font-weight: bold;
+    color: #c9302c;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background: #ffffff;
+    transition: background 0.3s, color 0.3s;
+}
+
+.donate-link:hover {
+    background: #c9302c;
+    color: #ffffff;
+}
+/* Impact Section Styles */
+.impact-section {
+    padding: 50px 10%;
+    background: url('images/OIP.jpg') center/cover no-repeat;
+    background-size: cover;
+    color: #ffffff;
+    font-family: "Poppins", sans-serif;
+}
+
+.impact-section h2 {
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+
+.impact-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.impact-card {
+    background: rgba(255, 255, 255, 0.75); /* Translucent effect */
+    padding: 30px;
+    border-radius: 10px;
+    width: 40%;
+    min-height: 500px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    
+    /* Centering Content */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.impact-card h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #d26969;
+    margin-bottom: 15px;
+}
+
+.impact-card h4 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #c12f2f;
+    margin-bottom: 10px;
+}
+
+.impact-card p {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    color: #4a4a4a;
+}
+
+.join-btn {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #a30000;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s;
+}
+
+.join-btn:hover {
+    background-color: #c9302c;
+}
